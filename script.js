@@ -52,7 +52,7 @@ const ID="68e070cc"
 const KEY="df0639785c417f6636ce1b1a50d9fccc"
 
 async function start(){
-const url =`http://api.adzuna.com/v1/api/jobs/gb/categories?app_id=${ID}&app_key=${KEY}&&content-type=application/json`
+const url =`https://api.adzuna.com/v1/api/jobs/gb/categories?app_id=${ID}&app_key=${KEY}&&content-type=application/json`
 let res = await fetch(url)
 let data= await res.json()
 showList(data.results)
@@ -76,7 +76,7 @@ document.getElementById('cat').innerHTML=`
 
 
 async function loadByCat(catTag){
-const url = `http://api.adzuna.com/v1/api/jobs/in/search/1?app_id=${ID}&app_key=${KEY}&category=${catTag}&where=Hyderabad&results_per_page=50&sort_by=date`;
+const url = `https://api.adzuna.com/v1/api/jobs/in/search/1?app_id=${ID}&app_key=${KEY}&category=${catTag}&where=Hyderabad&results_per_page=50&sort_by=date`;
 let res = await fetch(url)
 let data = await res.json();
 showJobs(data.results)
